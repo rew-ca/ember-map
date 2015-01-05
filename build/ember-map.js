@@ -72,7 +72,7 @@
     updateCurrentLocationMarker: (function() {
       var latlng, location;
       location = this.get("currentLocation");
-      latlng = new google.maps.LatLng(location[0], location[1]);
+      latlng = new google.maps.LatLng(location.lat, location.lng);
       return this.currentLocationMarker.setPosition(latlng);
     }).observes('currentLocation'),
     centerMap: (function() {

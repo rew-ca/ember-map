@@ -55,7 +55,7 @@ DreamcodeComponents.EmberMapComponent = Ember.Component.extend
 
   updateCurrentLocationMarker: (->
     location = @get("currentLocation")
-    latlng = new google.maps.LatLng(location[0], location[1])
+    latlng = new google.maps.LatLng(location.lat, location.lng)
     @currentLocationMarker.setPosition(latlng)
   ).observes('currentLocation')
 
